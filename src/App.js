@@ -1,24 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import react, { useEffect, useState } from "react";
+import "./App.css";
+import axios from "axios";
+import User from "./User";
+import Pagination from "./Pagination";
+import {USER_PER_PAGE} from "./Constants";
+
+
+
+
 
 function App() {
+  const [user, setUser] = useState([]);
+  // console.log(user);
+  const [loading, setloading] = useState(false);
+
+  const [page, setpage] = useState(1)
+  const [totalPages, settotalPages] = useState(0);
+
+  console.log(totalPages)
+  useEffect(() => {
+    const fetchdata = async () => {
+      setloading(true);
+      const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+
+      setloading(false);
+      setUser(res.data);
+      // console.log(res.data)
+
+      //for pagination
+      settotalPages(Math.ceil(res.data.length / USER_PER_PAGE))
+
+
+    };
+    fetchdata();
+  }, []);
+
+
+//for pagination --button click event
+const handleClick=(num)=>{
+  setpage(num)
+}
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>😄 React datatabel with Pagination 🔥</h1>
+      {loading ? (
+        <h1>Loading....</h1>
+      ) : (
+        <>
+          <User user={user} page={page} />
+          <Pagination totalPages={totalPages} handleClick={handleClick}/>
+        </>
+      )}
+    </>
   );
 }
 
