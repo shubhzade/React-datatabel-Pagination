@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/React-datatabel-Pagination/static/css/main.b1bca9e4.chunk.css",
+    "main.js": "/React-datatabel-Pagination/static/js/main.3bb18feb.chunk.js",
+    "main.js.map": "/React-datatabel-Pagination/static/js/main.3bb18feb.chunk.js.map",
+    "runtime-main.js": "/React-datatabel-Pagination/static/js/runtime-main.83cef68f.js",
+    "runtime-main.js.map": "/React-datatabel-Pagination/static/js/runtime-main.83cef68f.js.map",
+    "static/js/2.a8a65918.chunk.js": "/React-datatabel-Pagination/static/js/2.a8a65918.chunk.js",
+    "static/js/2.a8a65918.chunk.js.map": "/React-datatabel-Pagination/static/js/2.a8a65918.chunk.js.map",
+    "index.html": "/React-datatabel-Pagination/index.html",
+    "static/css/main.b1bca9e4.chunk.css.map": "/React-datatabel-Pagination/static/css/main.b1bca9e4.chunk.css.map",
+    "static/js/2.a8a65918.chunk.js.LICENSE.txt": "/React-datatabel-Pagination/static/js/2.a8a65918.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83cef68f.js",
+    "static/js/2.a8a65918.chunk.js",
+    "static/css/main.b1bca9e4.chunk.css",
+    "static/js/main.3bb18feb.chunk.js"
+  ]
+}
